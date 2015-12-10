@@ -147,7 +147,7 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme peaksea 
 catch
 endtry
 
@@ -429,3 +429,8 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+" Compile C and C++ file
+set makeprg=gcc\ -o\ %<\ %
+set makeprg=g++\ -o\ %<\ %
+command R !./%:r
